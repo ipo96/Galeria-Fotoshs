@@ -7,6 +7,7 @@ const eventos = [
     nombre: "06.08.25cole",
     fotos: ["1.jpg", "2.jpg"]
   },
+  
 ];
 
 const galeria = document.getElementById("galeria");
