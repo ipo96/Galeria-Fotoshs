@@ -1,7 +1,7 @@
 const eventos = [
   {
     nombre: "06.08.05ele",
-    fotos: ["1.jpg", "2.jpg"]
+    fotos: ["1.jpg", "2.jpg", "rb_81658.png"]
   },
   {
     nombre: "06.08.25cole",
