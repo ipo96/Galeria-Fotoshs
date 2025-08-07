@@ -1,12 +1,15 @@
 const eventos = [
   {
     nombre: "06.08.05ele",
-    fotos: ["1.jpg", "2.jpg", "3.jpg"]
+    fotos: ["1.jpg", "2.jpg"]
   },
   {
     nombre: "06.08.25cole",
     fotos: ["1.jpg", "2.jpg"]
-  }
+  },
+  {
+    nombre: "07.08.25efe",
+    fotos: ["1.jpg"]
 ];
 
 const galeria = document.getElementById("galeria");
