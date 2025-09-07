@@ -1,12 +1,8 @@
 const eventos = [
   {
-    nombre: "06.08.05ele",
-    fotos: ["1.jpg", "2.jpg"]
+    nombre: "fotos_venta",
+    totalFotos: 134 // Número total de fotos en la carpeta
   },
-  {
-    nombre: "06.08.25cole",
-    fotos: ["1.jpg", "2.jpg"]
-  }, 
 ];
 
 const galeria = document.getElementById("galeria");
@@ -22,11 +18,12 @@ eventos.forEach(evento => {
   const contenedorFotos = document.createElement("div");
   contenedorFotos.classList.add("fotos");
 
-  evento.fotos.forEach(foto => {
+  // Generar lista de fotos automáticamente
+  for (let i = 1; i <= evento.totalFotos; i++) {
     const img = document.createElement("img");
-    img.src = `eventos/${evento.nombre}/${foto}`;
+    img.src = `eventos/${evento.nombre}/${i}.jpg`;
     contenedorFotos.appendChild(img);
-  });
+  }
 
   div.appendChild(contenedorFotos);
   galeria.appendChild(div);

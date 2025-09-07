@@ -102,3 +102,49 @@ h1 {
     width: 100%;
   }
 }
+
+#whatsapp-btn {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  z-index: 1000;
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  font-family: Arial, sans-serif;
+}
+
+/* Icono */
+#whatsapp-btn img {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.3);
+  transition: transform 0.2s;
+  flex-shrink: 0; /* Evita que el icono se deforme */
+}
+
+/* Número */
+#whatsapp-btn span {
+  margin-left: 10px;
+  background: #25D366;
+  color: white;
+  padding: 6px 10px;
+  border-radius: 20px;
+  font-size: 14px;
+  font-weight: bold;
+  white-space: nowrap;
+  line-height: 1; /* Alinea verticalmente con el icono */
+}
+
+/* Hover effect */
+#whatsapp-btn:hover img {
+  transform: scale(1.1);
+}
+
+/* Responsive: solo icono en móviles */
+@media (max-width: 480px) {
+  #whatsapp-btn span {
+    display: none;
+  }
+}
