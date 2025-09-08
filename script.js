@@ -1,37 +1,36 @@
-const eventos = [
-  {
-    nombre: "fotos_venta",
-    totalFotos: 134 // Número total de fotos en la carpeta
-  },
-];
+document.addEventListener("DOMContentLoaded", () => {
+  fetch("eventos.json")
+    .then(res => res.json())
+    .then(eventos => {
+      const galeria = document.getElementById("galeria");
 
-const galeria = document.getElementById("galeria");
+      eventos.forEach(evento => {
+        // Crear bloque del evento
+        const div = document.createElement("div");
+        div.classList.add("evento");
 
-eventos.forEach(evento => {
-  const div = document.createElement("div");
-  div.classList.add("evento");
+        const titulo = document.createElement("h2");
+        titulo.textContent = evento.nombre;
+        div.appendChild(titulo);
 
-  const titulo = document.createElement("h2");
-  titulo.textContent = evento.nombre;
-  div.appendChild(titulo);
+        const contenedorFotos = document.createElement("div");
+        contenedorFotos.classList.add("fotos");
 
-  const contenedorFotos = document.createElement("div");
-  contenedorFotos.classList.add("fotos");
+        evento.fotos.forEach(f => {
+          const img = document.createElement("img");
+          img.src = f; // la ruta ya viene en eventos.json
+          contenedorFotos.appendChild(img);
+        });
 
-  // Generar lista de fotos automáticamente
-  for (let i = 1; i <= evento.totalFotos; i++) {
-    const img = document.createElement("img");
-    img.src = `eventos/${evento.nombre}/${i}.jpg`;
-    contenedorFotos.appendChild(img);
-  }
+        div.appendChild(contenedorFotos);
+        galeria.appendChild(div);
 
-  div.appendChild(contenedorFotos);
-  galeria.appendChild(div);
-
-  // Mostrar/ocultar fotos
-  titulo.addEventListener("click", () => {
-    contenedorFotos.classList.toggle("mostrar");
-  });
+        // toggle mostrar/ocultar fotos
+        titulo.addEventListener("click", () => {
+          contenedorFotos.classList.toggle("mostrar");
+        });
+      });
+    });
 });
 
 // ZOOM - Lightbox
