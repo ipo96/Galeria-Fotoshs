@@ -1,21 +1,5 @@
 [
   {
-    "nombre": "evento 2",
-    "fotos": [
-      "eventos/evento 2/7.png",
-      "eventos/evento 2/8.png",
-      "eventos/evento 2/9.png"
-    ]
-  },
-  {
-    "nombre": "evento 3",
-    "fotos": [
-      "eventos/evento 3/7.png",
-      "eventos/evento 3/8.png",
-      "eventos/evento 3/9.png"
-    ]
-  },
-  {
     "nombre": "fotos_venta",
     "fotos": [
       "eventos/fotos_venta/1.jpg",
